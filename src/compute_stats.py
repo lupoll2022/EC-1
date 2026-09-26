@@ -5,7 +5,7 @@ p = argparse.ArgumentParser()
 p.add_argument("-n", type=int, default=1000, help="grid size")
 args = p.parse_args()
 
-field = np.sin(np.linspace(0, 2*np.pi, args.n))
+field = np.cos(np.linspace(0, 2*np.pi, args.n))
 
 stats = {
     "N": args.n,
