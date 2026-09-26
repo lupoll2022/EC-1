@@ -11,7 +11,7 @@ stats = {
     "N": args.n,
     "min": float(field.min()),
     "max": float(field.max()),
-    "mean": float(field.mean())
+    "average": float(field.mean())
 }
 
 with open("results/summary.csv", "w", newline="") as f:
