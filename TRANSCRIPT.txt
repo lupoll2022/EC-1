@@ -1,0 +1,29 @@
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	TRANSCRIPT.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+*   5c6c40b (HEAD -> main) Merge branch 'feature/refactor'
+|\  
+| * 0a59619 (feature/refactor) refactor: rename mean->avg in output schema
+* | 44ef988 refactor: alternate mean output name on main
+* | e5b9354 feat: switch field from sin to cos
+|/  
+* 9e8d998 docs: add title to README
+* 3610bb9 chore: add .gitignore to keep large and generated files out
+* ed898e9 feat: add compute_stats and first results
+* df59ee5 chore: init repo with project scaffold
+diff --git a/src/compute_stats.py b/src/compute_stats.py
+index 459bd55..eccfd72 100644
+--- a/src/compute_stats.py
++++ b/src/compute_stats.py
+@@ -11,7 +11,7 @@ stats = {
+     "N": args.n,
+     "min": float(field.min()),
+     "max": float(field.max()),
+-    "average": float(field.mean())
++    "avg": float(field.mean())
+ }
+ 
+ with open("results/summary.csv", "w", newline="") as f:
